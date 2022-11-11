@@ -1,0 +1,134 @@
+* {
+  /* background-color: rgb(203, 25, 25); */
+  margin: 0;
+  color: aliceblue;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.main {
+  height: 130vh;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+}
+.bottom {
+  display: flex;
+}
+.nav {
+  color: aliceblue;
+  /* background-color: rgb(9, 239, 143); */
+  height: 100px;
+  /* margin-bottom: 40px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.nav a {
+  font-size: 30px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+.nav a:hover {
+  font-size: 31px;
+  text-decoration: none;
+  color: rgb(217, 217, 217);
+  text-shadow: 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa,
+    0 0 102px #0fa, 0 0 151px #0fa;
+}
+.left {
+  margin-right: 150px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  /* height: 60vh; */
+  width: 50vw;
+  /* background-color: rgb(235, 6, 6); */
+}
+.right {
+  /* height: 90vw; */
+  width: 50vw;
+  /* background-color: rgb(7, 167, 185); */
+}
+
+.pending-task {
+  margin-left: 16vw;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 50px;
+  width: 250px;
+  /* width: 30vw; */
+  text-align: center;
+}
+.button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+  transform: scale(1.03);
+  text-decoration: none;
+  color: rgb(217, 217, 217);
+  text-shadow: 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa,
+    0 0 102px #0fa, 0 0 151px #0fa;
+}
+
+.upload-work {
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 10px 50px;
+  margin: 50px 0;
+}
+
+.description {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  height: 80px;
+  width: 30vw;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding-left: 10px;
+}
+
+.description:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+  transform: scale(1.03);
+  text-decoration: none;
+  color: rgb(217, 217, 217);
+}
+
+/* #idcompilers {
+  display: none;
+} */
+.classcompiler {
+  display: none;
+}
+.classcompiler2 {
+  display: none;
+}
+
+#select-lang {
+  margin-bottom: 50px;
+}

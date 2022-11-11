@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar labcode -->
+    <nav class="navbar">
+        <div class="mid">
+            <ul>
+                <li><a href="../add_department/index.html">Department</a></li>
+                <li><a href="index.html">Subject</a></li>
+                <li><a href="../add_faculty/index.html">Faculty</a></li>
+                <li><a href="../allocatesubject/index.html">Faculty Allocate</a></li>
+                <li><a href="../add_student/index.html">Student</a></li>
+                <li><a href="#">Compiler</a></li>
+                <li><a href="../../index.html" style="background-color: red; border:1px solid red; padding:5px; border-radius: 10px;">Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar labcode end -->
+    <div class="container">
+        <div class="a">
+            <h2 class="heading">Add Subject</h2>
+        </div>
+        <div class="b">
+            <form class="dpt" id="Form">
+                <p>
+                    <input type="text" name="labname" id="labname" placeholder="  Enter labname" required>
+                </p>
+                <p>
+                    <input type="text" name="labcode" id="labcode" placeholder="  Enter labcode" required>
+                </p>
+                
+                <p>
+                    <input type="number" name="year" id="year" placeholder="  Enter Year" required>
+                </p>
+                <p>
+                    <button  class="btn" id="submit" type="submit" onclick="message()">Add sub</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+    <script src="subject.js"></script>
+    <!-- end javascript -->
+</body>
+
+</html>

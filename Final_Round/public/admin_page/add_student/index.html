@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar section -->
+    <nav class="navbar">
+        <div class="mid">
+            <ul>
+                <li><a href="../add_department/index.html">Department</a></li>
+                <li><a href="../add_subject/index.html">Subject</a></li>
+                <li><a href="../add_faculty/index.html">Faculty</a></li>
+                <li><a href="../allocatesubject/index.html">Faculty Allocate</a></li>
+                <li><a href="index.html">Student</a></li>
+                <li><a href="#">Compiler</a></li>
+                <li><a href="../../index.html" style="background-color: red; border:1px solid red; padding:5px; border-radius: 10px;">Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div id="login-box">
+        <div class="a">
+            <h2 class="heading">Add Student</h2>
+        </div>
+        <div class="left">
+
+            <input type="text" id="username" placeholder="Full name">
+
+            <input type="text" id="email" name="email" placeholder="E-mail" />
+
+            <input type="password" id="password" name="password" placeholder="Password" />
+            <p>
+                <label >Branch</label>
+                <select name="Branch" id="Branch">
+                    <option value="CSE">CSE</option>
+                    <option value="CS">CS</option>
+                    <option value="CSDS">CSDS</option>
+                    <option value="IT">IT</option>
+                </select>
+            </p>
+            <p>
+                <label >Section</label>
+                <select name="Section" id="Section">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </p>
+            <input class="btn" type="submit" id='signup' name="signup" value="ADD" />
+
+        </div>
+
+    
+    </div> 
+
+
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+        const firebaseConfig = {
+        apiKey: "AIzaSyDGxK_y97A2xcj8_drpy_klYu8UPtk5gMQ",
+        authDomain: "student-login-2e141.firebaseapp.com",
+        projectId: "student-login-2e141",
+        storageBucket: "student-login-2e141.appspot.com",
+        messagingSenderId: "543313599591",
+        appId: "1:543313599591:web:0ee473aa8ec2934b1008c2"
+};
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+        signup.addEventListener('click', (e) => {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var username = document.getElementById('username').value;
+            var Branch = document.getElementById('Branch').value;
+            var Section = document.getElementById('Section').value;
+            // var Phone = document.getElementById('Phone').value;
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    set(ref(database, 'user/' + user.uid), {
+                        username: username,
+                        email: email,
+                        Branch:Branch,
+                        Section:Section
+                        // Phone:Phone
+                    })
+                    alert('user created!');
+                    // ...
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(errorMessage);
+                    // ..
+                });
+        });
+    
+    
+    </script>
+</body>
+</html>

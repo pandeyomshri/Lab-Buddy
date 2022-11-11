@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty details</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- navbar section -->
+    <nav class="navbar">
+        <div class="mid">
+            <ul>
+                <li><a href="../add_department/index.html">Department</a></li>
+                <li><a href="../add_subject/index.html">Subject</a></li>
+                <li><a href="index.html">Faculty</a></li>
+                <li><a href="../allocatesubject/index.html">Faculty Allocate</a></li>
+                <li><a href="../add_student/index.html">Student</a></li>
+                <li><a href="#">Compiler</a></li>
+                <li><a href="../../index.html" style="background-color: red; border:1px solid red; padding:5px; border-radius: 10px;">Log out</a></li>
+                <!-- <li><a href="#">Promote Student</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar section end -->
+    <!-- <div class="container">
+        <div class="a">
+            <h2 class="heading">Add Faculty</h2>
+        </div>
+        <div class="b">
+            <form class="dpt">
+                <p>
+                    <input type="text" name="name" id="name" placeholder="  Enter Name" required />
+                </p>
+                
+                <p>
+                    <input type="email" name="email" id="email" placeholder="  Enter Email" required />
+                </p>
+                <p>
+                    <input type="password" name="password" id="password" placeholder="  Enter Password" required />
+                </p>
+                <p>
+                    <button class="btn" type="submit" name="submitdata" id="submitdata">
+                        Create
+                    </button>
+                </p>
+            </form>
+        </div>
+    </div> -->
+
+
+
+    <div id="login-box">
+        <div class="a">
+            <h2 class="heading">Add Faculty</h2>
+        </div>
+        <div class="left">
+            <!-- <h1 id='status'>Sign up</h1> -->
+            <!-- <p class="status2">Enter Details</p> -->
+
+            <input type="text" id="username" placeholder="Full name">
+
+            <!-- <input type="text" id="Phone" placeholder="Phone No."/> -->
+
+            <input type="text" id="email" name="email" placeholder="E-mail" />
+
+            <input type="password" id="password" name="password" placeholder="Password" />
+
+
+
+            <input class="btn" type="submit" id='signup' name="signup" value="ADD" />
+
+        </div>
+
+    
+    </div> 
+
+
+
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyAhB_pj5nUWmXxgAcTrqVEA7fKRwZQz20o",
+            authDomain: "faculty-login-f802b.firebaseapp.com",
+            projectId: "faculty-login-f802b",
+            storageBucket: "faculty-login-f802b.appspot.com",
+            messagingSenderId: "33922092504",
+            appId: "1:33922092504:web:eba0a698523eaa5b7ab6ad",
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+        signup.addEventListener('click', (e) => {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var username = document.getElementById('username').value;
+            // var Phone = document.getElementById('Phone').value;
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    set(ref(database, 'user/' + user.uid), {
+                        username: username,
+                        email: email
+                        // Phone:Phone
+                    })
+                    alert('user created!');
+                    // ...
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(errorMessage);
+                    // ..
+                });
+        });
+    
+    
+    </script>
+</body>
+
+</html>

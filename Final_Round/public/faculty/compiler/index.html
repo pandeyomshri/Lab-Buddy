@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- navbar section -->
+    <!-- <nav class="navbar">
+      <div class="mid">
+          <ul>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Assignments</a></li>
+              <li><a href="#">Compiler</a></li>
+              <li><a href="#">Log out </a></li>
+              <li><a href="#">Student</a></li>
+              <li><a href="index.html">Compiler</a></li> -->
+              <!-- <li><a href="#">Compiler</a></li>  </ul>
+      </div>
+  </nav> --> 
+  <div class="nav">
+    <a href="../../faculty/faculty dashboard/index.html" id="profile">Profile</a>
+    <a href="../Assignments/assignmentslanding/index.html" id="assignments">Assignments</a>
+    <a href="index.html" id="compiler">Compiler</a>
+    <a href="../../index.html" style="background-color: red; border:1px solid red; padding:5px; border-radius: 10px;"onclick="myFun()" >Log out</a>
+  </div>
+  <!-- navbar section end -->
+
+
+
+
+
+
+
+
+
+
+    <div class="compiler">
+        <div class="classcompiler" id="idcompilers" data-pym-src='https://www.jdoodle.com/plugin' data-language="cpp"
+          data-version-index="4" data-libs="mavenlib1, mavenlib2">
+          Optional default code goes here
+        </div>
+        
+
+</div>
+</div>
+
+<script>
+    var x=0;
+function myFunction() {
+  if(x%2==0){
+    x++;
+  document.getElementById("idcompilers").classList.remove("classcompiler");
+  document.getElementById("select-lang").innerHTML="CPP COMPILER";
+  document.getElementById("idcompilers2").classList.add("classcompiler2");
+
+}
+else{
+  x++;
+  document.getElementById("idcompilers2").classList.remove("classcompiler2");
+  document.getElementById("select-lang").innerHTML="JAVA COMPILER";
+  document.getElementById("idcompilers").classList.add("classcompiler");
+ 
+}
+}
+</script>
+<script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+</body>
+</html>

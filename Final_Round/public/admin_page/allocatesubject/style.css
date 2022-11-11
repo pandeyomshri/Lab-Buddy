@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+/* navbar */
+.navbar{
+
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    /* background-color: #2D898D; */
+    height: 63px;
+    width: 100vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+}
+.mid ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    float: right;
+    margin: 10px 22px;
+    font-family: serif;
+}
+.mid ul li{
+    list-style-type: none;
+}
+.mid ul li a{
+    text-decoration: none;
+    margin: 0px 30px;
+    color: white;
+}
+.mid ul li a:hover{
+    color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+.container{
+    /* display: flex; */
+    /* background-image: linear-gradient(to right top, #18283f,#305b74,#2d858e,#34bd86
+); */
+background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    height: 100vh;
+    width: 100vw;
+}
+
+.f{
+    border: 0.5px solid white;
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.f p{
+    padding: 10px;
+    margin-right: 38px;
+    font-size: 26px;
+    border: 1px solid;
+    height: 35px;
+    width: 120px;
+    margin-left: 20px;
+    margin-top: 160px;
+    /* background-color: #FCD5A9; */
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+.btn{
+    margin-left: 86px;
+    height: 50px;
+    width: 130px;
+    font-size: 19px;
+    border-radius: 5px;
+    margin-top: 160px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: orange;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+.drop{
+    margin-left: 86px;
+    height: 32px;
+    width: 175px;
+    font-size: 19px;
+    margin-top: 160px;
+ 
+    border-radius: 5px;
+}
+.f p{
+    width: 280px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar section -->
+    <nav class="navbar">
+        <div class="mid">
+            <ul>
+                <li><a href="index.html">Department</a></li>
+                <li><a href="../add_subject/index.html">Subject</a></li>
+                <li><a href="../add_faculty/index.html">Faculty</a></li>
+                <li><a href="../allocatesubject/index.html">Faculty Allocate</a></li>
+                <li><a href="../add_student/index.html">Student</a></li>
+                <li><a href="#">Compiler</a></li>
+                <li><a href="../../index.html" style="background-color: red; border:1px solid red; padding:5px; border-radius: 10px;">Log out</a></li>
+                <!-- <li><a href="#">Promote Student</a></li> -->
+                <!-- <li><a href="#">Compiler</a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar section end -->
+    <div class="container">
+        <div class="a">
+            <h2 class="heading">Create Batch</h2>
+        </div>
+        <div class="b">
+            <form class="dpt" id="Form">
+                <p>
+                    <input type="text" name="branch" id="branch" placeholder="  Enter Branch" required>
+                </p>
+                <p>
+                    <input type="text" name="section" id="section" placeholder="  Enter Section" required>
+                </p>
+                <p>
+                    <input type="number" name="year" id="year" placeholder="  Enter Year" required>
+                </p>
+                <p>
+                    <button  class="btn" id="submit" type="submit" onclick="message()">Create</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+    <script src="dept.js"></script>
+    <!-- end javascript -->
+</body>
+
+</html>

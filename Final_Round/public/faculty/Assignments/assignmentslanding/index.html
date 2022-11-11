@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="nav">
+      <a href="../../faculty dashboard/index.html" id="profile">Profile</a>
+      <a href="index.html" id="assignments">Assignments</a>
+      <a href="../../compiler/index.html" id="compiler">Compiler</a>
+      <a href="../../../index.html" style="background-color: red; border:1px solid red; padding:5px; border-radius: 10px;">Log out</a>
+    </div>
+    <div style=" height:2px; background-color: rgb(16, 9, 1); "></div>
+
+    <div class="create-assignment">
+      <div class="assignment-create-status-button" >
+      <h1 ><a href="../assignmentslanding/index.html">CREATE ASSIGNMENT</a></h1>
+      <h1 ><a href="../assignmentcheck/index.html">CHECK ASSIGNMENT</a></h1></div>
+      <div class="crt-asmnt">
+        <div class="dropsec">
+          <div class="branches">
+            <h3 class="headings">Branch</h3>
+            <select size="1px" name="Branch" class="dropdown" id="branches">
+              <option id="cs" value="CS">CS</option>
+              <option value="CSE">CSE</option>
+              <option value="IT">IT</option>
+              <option value="CSE-AIML">CSE-AIML</option>
+              <option value="CSE-DS">CSE-DS</option>
+              <option value="ECE">ECE</option>
+              <option value="EN">EN</option>
+              <option value="ME">ME</option>
+              <option value="CE">CE</option>
+            </select>
+          </div>
+          <div class="section">
+            <h3 class="headings">Section</h3>
+            <select size="1px" name="section" class="dropdown" id="sec">
+              <option value="sec-a">SEC-A</option>
+              <option value="sec-b">SEC-B</option>
+              <option value="sec-c">SEC-C</option>
+            </select>
+          </div>
+          <div class="lab-sub">
+            <h3 class="headings">Subject</h3>
+            <select size="1px" name="labs" class="dropdown" id="lab-subjects">
+              <option id="dbms" value="dbms">DBMS</option>
+              <option id="daa" value="daa">DAA</option>
+              <option id="cd" value="cd">CD</option>
+              <option id="cn" value="cn">CN</option>
+              <option id="mp" value="mp">COA</option>
+              <option id="ds" value="ds">DS</option>
+              <option id="dstl" value="dstl">DSTL</option>
+              <option id="python" value="python">PYTHON</option>
+            </select>
+          </div>
+        </div>
+        <divc class="date-statement">
+          <h2>Enter Lab Statement</h2>
+          <textarea id="lab-statement" rows="5" cols="60" name="description">
+            Enter details here...
+         </textarea>
+          <div class="end-date">
+            <p>Set Last date of submission</p>
+            <input type="date" name="" id="end-time">
+          </div>
+          <button class="final-submit" onclick="popup()">Create Assignment</button>
+      </div>
+    </div>
+
+
+  </div>
+  </div>
+</body>
+<script>
+  function popup(){
+    alert("Assignment Created")
+  }
+</script>
+
+</html>
